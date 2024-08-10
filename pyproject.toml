@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "purgebot"
+version = "0.1.0"
+description = ""
+authors = ["travis-bittel <travis.bittel2@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "bot" },
+]
+
+[tool.poetry.dependencies]
+python = "3.9"
+discord-py = "^2.4.0"
+boto3 = "^1.34.158"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry-plugin-lambda-build]
+package-artifact-path = "bot_lambda.zip"

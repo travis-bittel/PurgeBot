@@ -1,0 +1,8 @@
+*.secret
+poetry.lock
+/aws/terraform.tfstate
+/aws/terraform.tfstate.backup
+*/.terraform/*
+.terraform.lock.hcl
+.idea
+bot_lambda.zip
