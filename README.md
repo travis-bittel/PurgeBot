@@ -14,15 +14,22 @@ This project uses Poetry for package management, mainly because I needed to get 
 To install Poetry you need pipx:
 * Windows: `py -m pip install --user pipx && py -m pipx ensurepath`
 * Mac: `brew install pipx`
-* Linux: `You're on your own`
+* Linux: `brew install pipx`
 
 Then use `pipx` to install Poetry:
 * Windows: `pipx install poetry`
 * Mac: `pipx install poetry`
-* Linux: `Still on your own`
+* Linux: `pipx install poetry`
+
+Then install the project dependencies:
+1. `poetry lock`
+2. `poetry update`
+3. `poetry install --extras dev-dependencies`
+
+## Unit Tests
+From the base directory, run: `poetry run pytest`
 
 ## Deployment
-Notes for myself:
 1. From the base directory: `poetry build-lambda`
 2. From the `aws` directory: `terraform apply`
 

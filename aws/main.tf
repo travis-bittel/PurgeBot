@@ -9,6 +9,7 @@ data "aws_iam_policy_document" "bot_lambda_assume_role_policy" {
   }
 }
 
+# The Discord secret key is stored in SSM and retrieved at runtime
 resource "aws_iam_role_policy" "bot_ssm_parameter_access" {
   name = "ssm_parameter_access"
   policy = jsonencode({
